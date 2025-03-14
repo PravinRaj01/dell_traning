@@ -9,6 +9,7 @@ st.set_page_config(
 
 st.header("Day 3")
 st.markdown("# This is the main page")
+st.snow()
 
 st.sidebar.header("Sidebar")
 st.sidebar.markdown("# This is the sidebar")
