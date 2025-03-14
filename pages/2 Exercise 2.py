@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 
 st.header("Exercise 2")
@@ -8,7 +9,7 @@ st.header("Exercise 2")
 
 
 #to filter columns from the dataframe
-df = pd.read_excel('utils/sampledata.xlsx')
+df = pd.read_excel(os.path.join('utils', 'sampleData.xlsx'))
 
 
 columns_to_filter = st.segmented_control('Select columns to filter out', df.columns, selection_mode = 'multi')
