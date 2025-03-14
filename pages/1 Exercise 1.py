@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+import os
 
 def popup():
     st.markdown("---")
@@ -10,7 +11,8 @@ def popup():
         'name': ['Kuala Lumpur']
     }))
     st.markdown("---")
-    df = pd.read_excel('utils/sampleData.xlsx')
+    #to filter columns from the dataframe
+    df = pd.read_excel(os.path.join('utils', 'sampleData.xlsx'))
     st.dataframe(df)
     chart_type = st.selectbox("Select a chart type", ['Bar Chart', 'Line Chart', 'Scatter Chart'])
     chart(chart_type)
