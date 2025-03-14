@@ -19,7 +19,7 @@ def popup():
 
 
 def chart(chart_type):
-    df = pd.read_excel('sampledata.xlsx')
+    df = pd.read_excel(os.path.join('utils', 'sampleData.xlsx'))
 
     if chart_type == "Bar Chart":
         return st.bar_chart(df, x="Location", y="Income")
